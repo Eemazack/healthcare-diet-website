@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Health, Nutrition and Diet Guide System</title>
+        <link rel="icon" href="signup.png">
+		<style type = "text/css">
+			body {
+
+				background-image:url(log.jpg);
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-position: center;
+				background-size: cover;
+ 
+				}
+			login-table{
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				}
+			a { 
+				text-decoration: none; }
+			a:hover { text-decoration: underline; }
+			
+			img {
+				border:1px solid #021a40;
+				}
+
+
+		</style>
+    </head>
+    <body>
+        <header>  
+                
+            
+           <login-table>
+		      <img src="logo7.JPG" width ="160" height="160" > 
+		      <h1 > Sign Up </h1>
+			<form action="connect.php" method="post"> 
+                <table>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="username" id="uname" placeholder="Enter Username" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password"  name="password" id="pwd" required></td>
+                </tr>
+				<tr>
+				    <td>    </td>
+					<td><input type="checkbox" onclick="myFunction()">Show Password </td>
+				</tr>
+					
+				<tr>
+					<td>Email:</td>
+					<td>
+						<input type = "email" name="email" placeholder="name@example.com" required>
+					</td>
+				</tr>
+				<tr>
+					<td>Gender:</td>
+					<td>
+						<input type = "radio" name="gender" value="M" required>Male
+						<input type = "radio" name="gender" value= "F" required>Female
+					</td>
+				</tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" class="login-button" name="submit" value="Submit">&nbsp;
+                    <input type="reset" class="reset-button" name="reset" value="Clear"></td>
+                </tr>
+                </table>
+				
+			</form>
+			<h4> Already have an account?<br> 
+			<a href="login.html"> Login </a></h4>
+		
+			</login-table >
+                
+           
+        </header>
+	<script>
+			function myFunction() {
+			var x = document.getElementById("pwd");
+				if (x.type === "password") {
+					x.type = "text";
+				} else {
+					x.type = "password";
+				}
+			}
+</script>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<html>
+	<head>
+		<title>Calorie Calculator</title>
+		<link href="Button.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="cicon.png">
+		<style type = "text/css">
+			body {
+					background-image: url('green.jpg');
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+					background-position: center;
+					background-size: cover;
+				}
+			i	{
+					display: block;
+					top:30%;
+					margin-left: auto;
+					margin-right: auto;
+					width: 50%;
+				}
+			h1 {
+					color: black;
+					margin-left: auto;
+					margin-right: auto;					
+					font-family: georgia;
+					font-size: 200%;
+				}
+			
+			p	{ 
+					font-size: 20pt;
+					font-family: georgia; 
+				}
+			h2  { 
+					color: black;
+					margin-left: auto;
+					margin-right: auto;					
+					font-family: georgia;
+					font-size: 12pt;
+				}
+       </style>
+	   
+
+
+        <script type="text/javascript">
+				var myWeight;
+				var myDistance;
+
+				function HowMany(form){
+						var difference;
+						difference = (myDistance * myWeight) * .653;
+						form.Fdiff.value = difference;
+
+						if (difference < 100) {
+									form.comment.value="You better start working!";}
+						if (difference > 101 && difference < 200) {
+									form.comment.value="Nice, you can do better~";}
+						if (difference > 201 && difference < 300) {
+									form.comment.value="Very good! Push above 300 next time :)";}
+						if (difference > 301 && difference < 500) {
+									form.comment.value="Great! You are a runner.....keep it up ;)";}
+						if (difference > 501 && difference < 700) {
+									form.comment.value="Bill Rogers move over!";}
+						if (difference > 701) {
+									form.comment.value="Your my hero! Have a nice treat on yourself."; }
+
+										}
+
+				function SetMyWeight(weight){myWeight = weight.value;}
+
+				function SetmyDistance(dis){myDistance = dis.value;}
+
+				function ClearForm(form){
+							form.myWeight.value = "";
+							form.myDistance.value = "";
+							form.Fdiff.value = "";
+							form.comment.value = "";
+
+										}
+        </script>
+	</head>
+	
+	<body>
+			<div class="main-nav">
+                <ul class="main-nav">
+                    <li> <a href="lhome.html"> HOME </a></li>
+                	<li> <a href="about.html"> ABOUT </a></li>
+                	<li> <a href='logout.php'> LOGOUT </a></li>
+					<br><br>
+                </ul>
+            </div>
+	<br><br>
+		<i><center><img src="cfx.png" width="250" height="200" alt=“BMI_PAGE”></center></i>
+                <h1><center>Calorie Calculator</center></h1>;
+                </SCRIPT><center><FORM METHOD="POST">
+						<TABLE border=3>
+								<TR>
+									<TR>
+										<TD><h2><div align=center>Your Weight<br>(kg)</div></h2></TD>
+										<TD><h2><div align=center>Miles run<br>(km)</div></h2></TD>
+										<TD><h2><div align=center>Calories<br>burned</div></h2></TD>
+										
+									</TR>
+								</TR>
+										<TD><div align=center><INPUT TYPE=text NAME=myWeight SIZE="4"ONCHANGE="SetMyWeight(this)"></div></TD>
+										<TD><div align=center><INPUT TYPE=text NAME=myDistance SIZE="4"ONCHANGE="SetmyDistance(this)"></div></TD>
+										<TD><div align=center><INPUT TYPE=text NAME="Fdiff" VALUE="" SIZE="6"></div></TD>
+						</TABLE>
+									     <br>
+										<INPUT TYPE=BUTTON ONCLICK="HowMany(this.form)" VALUE="Calculate"> &nbsp; &nbsp;
+										<INPUT TYPE=BUTTON VALUE=" Reset " onClick="ClearForm(this.form)">
+						
+								<TABLE border=3>
+									<TR><p>
+										<TD><h2><DIV ALIGN=CENTER>My Comment</DIV></h2></TD>
+										<TD><INPUT TYPE=text NAME="comment" size="37"></td>
+									</TR></p>
+								</TABLE></FORM></center>
+								
+				<center><img src="cscale.png" width="300" height="100" alt=“BMI_SCALE”></center> 
+	</body>
+</html>

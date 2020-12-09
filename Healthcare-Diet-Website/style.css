@@ -1,0 +1,67 @@
+#header{
+    color: black;
+    text-align: center;
+
+    
+}
+
+
+body {
+    background-image: url('love.jfif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#container{
+    background-color: rgba(243, 243, 245, 0.473);
+    width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#content
+{
+    width: 800px;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+
+
+.dietbtn
+{
+	float: center;
+	margin-top: 90px;
+}
+
+.dietbtn li
+{
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+
+.dietbtn li a 
+{
+    
+    border: 1px solid white;
+    background-color: lightgreen;
+    color: black;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.dietbtn li a:hover{
+    background-color: #F75D59
+    
+}

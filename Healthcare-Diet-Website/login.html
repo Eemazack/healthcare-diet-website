@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Health, Nutrition and Diet Guide System</title>
+        <link rel="icon" href="login.png">
+		
+		<style type = "text/css">
+			body {
+
+				background-image:url(log.jpg);
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-position: center;
+				background-size: cover;
+ 
+				}
+			login-table{
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				}
+			a { 
+				text-decoration: none; }
+			a:hover { text-decoration: underline; 
+			}
+			
+
+
+		</style>
+		
+    </head>
+    <body>
+        <header>  
+                
+            
+           <login-table>
+		      <img src="logo7.JPG" width ="160" height="160"> 
+
+		      <h1> Login In</h1>
+			<form action="view.php" method="post"> 
+                <table>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="username" id="uname" placeholder="Enter Username" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password"  name="password" id="pwd" placeholder="Enter Password" required></td>
+                </tr>
+				<tr>
+				    <td>    </td>
+					<td><input type="checkbox" onclick="myFunction()">Show Password </td>
+				</tr>
+				
+        
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Enter">&nbsp;
+                    <input type="reset" class="reset-button" name="reset" value="Clear"></td>
+                </tr>
+                </table>
+			</form>
+			
+			<p> Don't have an account? <a href="signup.html"> Sign Up</a></p>
+			
+            </login-table>    
+           
+        </header>
+		<script>
+function myFunction() {
+  var x = document.getElementById("pwd");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+    </body>
+</html>
